@@ -1,0 +1,15 @@
+# Configuration vhost for testzf
+
+<VirtualHost *:80>
+    ServerName testzf.local
+    DocumentRoot /home/spare/testzf/public
+
+    SetEnv APPLICATION_ENV development
+ 
+    <Directory /home/spare/testzf/public>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+</VirtualHost>
